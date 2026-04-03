@@ -9,19 +9,19 @@ The goal of this project was to develop a system that, given sampled displacemen
 
 ## Example Videos
 
-Example 1:
+### Example 1:
 10 timesteps over a 10-second interval (estimating forwards 1 second in the future), 5 terms in the taylor series
 <video src="https://github.com/user-attachments/assets/57283446-5a6b-43bb-b602-14efaf5493b3"></video>
 5 timesteps over a 10-second interval (estimating forwards 2 seconds in the future), 5 terms in the taylor series
 <video src="https://github.com/user-attachments/assets/b9f85bea-e838-4d60-be2d-f861b767ab86"></video>
 
-Example 2:
+### Example 2:
 10 timesteps over a 10-second interval (estimating forwards 1 second in the future), 7 terms in the taylor series
 <video src="https://github.com/user-attachments/assets/c57da3f4-d430-470e-abd2-83719e59955f"></video>
 5 timesteps over a 10-second interval (estimating forwards 2 seconds in the future), 7 terms in the taylor series
 <video src="https://github.com/user-attachments/assets/9bbd27ac-6a4e-4c80-a2a5-63dd2c7f2f46"></video>
 
-### Applications
+## Applications
 
 This system could be used for:
 1. Virtual Reality:
