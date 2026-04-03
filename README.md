@@ -6,6 +6,12 @@ A proof-of-concept for a Taylor Series-based 3D Motion Extrapolator. I originall
 
 The goal of this project was to develop a system that, given sampled displacement or translation and rotation matrices as input at a given point in time alongside estimated derivatives (such as from a rolling average), you can estimate the future position of an object from a given time point over some time interval.
 
+10 timesteps over a 10-second interval (estimating over 1 second), 5 terms in the taylor series
+<video src="https://github.com/user-attachments/assets/6ba33334-af34-4836-8e24-f50313a0e050"></video>
+
+20 timesteps over a 10-second interval (estimating over 2 seconds), 5 terms in the taylor series
+<video src="https://github.com/user-attachments/assets/e7b16216-ff58-46bf-8413-b5014fcf701a"></video>
+
 ### Applications
 
 This system could be used for:
