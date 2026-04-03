@@ -14,7 +14,11 @@ vertices = double([
 % These matrices parametrize an object's global position and rotation data
 % as a modelMatrix. I'm using them in substitute of tracking data to
 % average the displacementMatrix from. Try changing it!
+
+
 syms t
+% Path 1 setup:
+
 rotationX = [
     1 0 0 0;
     0 cos(t) -sin(t) 0;
@@ -33,13 +37,41 @@ rotationZ = [
     0 0 1 0;
     0 0 0 1;
 ];
-
 position = [
     1 0 0 t/2;
     0 1 0 4*cos(t);
     0 0 1 4*sin(t);
     0 0 0 1;
 ];
+
+% Path 2 setup:
+%
+% rotationX = [
+%    1 0 0 0;
+%     0 cos(t) -sin(t) 0;
+%     0 sin(t) cos(t) 0;
+%     0 0 0 1;
+% ];
+% rotationY = [
+%     cos(t) 0 sin(t) 0;
+%     0 1 0 0;
+%     -sin(t) 0 cos(t) 0;
+%     0 0 0 1;
+% ];
+% rotationZ = [
+%     cos(t^2) -sin(t^2) 0 0;
+%     sin(t^2) cos(t^2) 0 0;
+%     0 0 1 0;
+%     0 0 0 1;
+% ];
+% 
+% position = [
+%     1 0 0 0;
+%     0 1 0 0;
+%     0 0 1 4*sin(t);
+%     0 0 0 1;
+% ];
+
 
 modelMatrix = position * rotationX*rotationY*rotationZ;
 
@@ -118,6 +150,7 @@ end
 
 function recordFrame(v, fig)
     camorbit(0.5, 0);
+    pause(0.01);
     frame = getframe(fig);
     writeVideo(v, frame);
 end
@@ -157,18 +190,19 @@ nextCubeColour = [0.2, 0.5, 0.2];
 pastOrigin = zeros(4, timesteps);
 
 fig = gcf;
-v = VideoWriter("time10_timesteps_5", "MPEG-4");
+v = VideoWriter("path1_time10_timesteps5_terms5", "MPEG-4");
 open(v);
 
 % Plots the full iteration; current cube, followed by predicted positions,
 % followed by the actual next position of the cube, and then updates values
 % for the next iteration
 for iter = 1:timesteps
-    hold on;
 
     position = double(subs(modelMatrix, t, t_val));
-
     pastOrigin(:, iter) = sum((position * vertices), 2) ./ 8;
+    
+    hold on;
+
     plotCurrentPath(iter, pastOrigin);
     
     plotCube(position * vertices, currCubeColour, "-", v, fig);
