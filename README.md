@@ -1,6 +1,6 @@
 ## About
 
-A proof-of-concept for a Taylor Series-based 3D Motion Extrapolator. I originally came up with the idea for this a few weeks ago. I implemented in Matlab around mid-March, and I decided to upload it af er some polishing and bug-fixing. It uses a Taylor-series approach on displacement matrices.
+A proof-of-concept for a Taylor Series-based 3D Motion Extrapolator. I originally came up with the idea for this a few weeks ago. I implemented it in Matlab around mid-March, and I decided to upload it after some polishing and bug-fixing. It uses a Taylor-series approach to extrapolate outwards for the estimation of a future position at each time step.
 
 ## Goals
 
