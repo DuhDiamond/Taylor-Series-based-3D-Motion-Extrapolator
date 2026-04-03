@@ -1,10 +1,10 @@
 ## About
 
-A proof-of-concept for a Taylor Series-based 3D Motion Extrapolator I originally came up with the idea for a few weeks ago. Implemented in Matlab around mid-March, decided to upload it, so I polished it and fixed some minor bugs. It uses a Taylor-series approach on displacement matrices, given an object's position and rotation (or direct displacement matrix) and approximated/estimated derivatives over time.
+A proof-of-concept for a Taylor Series-based 3D Motion Extrapolator. I originally came up with the idea for this a few weeks ago. I implemented in Matlab around mid-March, and I decided to upload it af er some polishing and bug-fixing. It uses a Taylor-series approach on displacement matrices.
 
 ## Goals
 
-The goal of this project was to develop a system that, given sampled displacement matrices and approximated/estimated derivatives (a matrix representing the rate-of-change of the displacement matrix, the rate-of-change of that, etc.) with respect to time (such as from a rolling average), you could estimate the future position of an object from a given time point over a time interval.
+The goal of this project was to develop a system that, given sampled displacement or translation and rotation matrices as input at a given point in time alongside estimated derivatives (such as from a rolling average), you can estimate the future position of an object from a given time point over some time interval.
 
 ### Applications
 
