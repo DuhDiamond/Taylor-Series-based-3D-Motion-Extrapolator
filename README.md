@@ -62,7 +62,7 @@ Implementation details are available through comments in the Matlab script in th
 Here are some steps if you'd like to run it yourself. I use Windows + WSL (Windows Subsystem for Linux, based on Debian Linux) in a Visual Studio Code environment.
 
 1. Git clone the repository: In Linux/WSL, this can be done by running the following command in your terminal, from the folder you'd like to copy it into:
-git@github.com:DuhDiamond/Taylor-Series-based-3D-Motion-Extrapolator.git
+git clone git@github.com:DuhDiamond/Taylor-Series-based-3D-Motion-Extrapolator.git
 2. Run the Matlab script from the cloned folder in your file explorer (or command line) of choice.
 3. An additional Matlab window should open and display each frame.
 
